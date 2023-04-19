@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import "primereact/resources/themes/lara-light-indigo/theme.css";    
+import "primereact/resources/primereact.min.css";
+import React, { useState }  from 'react';
+import DisplayItems from './components/To-Do_showItems';
+import AddItem from './components/To-D0_addItem';
+import DisplaySpinner from './components/To-Do_spinner';
+import { ProgressSpinner } from 'primereact/progressspinner';
 
-function App() {
+        
+
+function App() { 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='ToDoHeader'>
+      <span>To Do List</span>
     </div>
+    <div>
+   
+      <AddItem />
+      <DisplayItems/> 
+    </div>
+    </>
+    
   );
 }
 
